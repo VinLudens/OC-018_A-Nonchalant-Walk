@@ -79,14 +79,14 @@ right = \relative c'' {
 
   \cadenzaOn\small
   \once\override Beam.positions = #'(-1 . -7.2) \tuplet 15/8 { \stemDown f'='''16[ e cis a \change Staff = "left" \stemUp f e cis a \change Staff = "right" \stemDown f e cis a \change Staff = "left" \stemUp \clef "bass" f e cis] }
-  \once\override TupletNumber.whiteout = #4 \once\override Beam.positions = #'(1.5 . 10) \tuplet 15/8 { a[ cis e f \change Staff = "right" \stemDown a cis e f \change Staff = "left" \stemUp \once\override Staff.Clef.space-alist = #'((next-note . (extra-space . 15.0))) \clef "treble" a cis e f \change Staff = "right" \stemDown a cis e] }
+  \once\override TupletNumber.layer = #-1 \once\override TupletNumber.whiteout = #4 \once\override Beam.positions = #'(1.5 . 10) \tuplet 15/8 { a[ cis e f \change Staff = "right" \stemDown a cis e f \change Staff = "left" \stemUp \once\override Staff.Clef.layer = #-2 \clef "treble" a cis e f \change Staff = "right" \stemDown a cis e] }
   \once\override Beam.positions = #'(0 . -6) \tuplet 12/8 { f[ e cis a \change Staff = "left" \stemUp f e cis a \change Staff = "right" \stemDown f e cis a] }
   \change Staff = "left" \stemUp \clef "bass" \cadenzaOff \partial 4
   \stemNeutral\normalsize f16[ e cis a]( |
 
   g4)
   \cadenzaOn\small
-  \once\override TupletNumber.whiteout = #4 \once\override Beam.positions = #'(3 . 8) \tuplet 15/8 { \stemUp b16[ dis fis g \change Staff = "right" \stemDown b dis fis g \change Staff = "left" \stemUp \once\override Staff.Clef.layer = #-1 \clef "treble" b dis fis g \change Staff = "right" \stemDown b dis fis] }
+  \once \override TupletNumber.layer = #-1 \once\override TupletNumber.whiteout = #4 \once\override Beam.positions = #'(3 . 8) \tuplet 15/8 { \stemUp b16[ dis fis g \change Staff = "right" \stemDown b dis fis g \change Staff = "left" \stemUp \once\override Staff.Clef.layer = #-2 \clef "treble" b dis fis g \change Staff = "right" \stemDown b dis fis] }
   \once\override Beam.positions = #'(-2 . -7) \tuplet 15/8 { g[ fis dis b \change Staff = "left" \stemUp g fis dis b \change Staff = "right" \stemDown g fis dis b \change Staff = "left" \stemUp \clef "bass" g fis dis] }
   \once\override TupletNumber.whiteout = #4 \once\override Staff.TupletNumber.layer = #-1 \once\override Beam.positions = #'(3 . 6) \tuplet 12/8 { b[ dis fis g \change Staff = "right" \stemDown b dis fis g \change Staff = "left" \stemUp \once\override Staff.Clef.layer = #-10 \clef "treble" b dis fis g] }
   \change Staff = "right" \stemNeutral \cadenzaOff \partial 4
