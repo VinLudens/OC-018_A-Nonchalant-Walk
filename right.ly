@@ -212,9 +212,9 @@ right = \relative c'' {
       \time 4/4
       \key des \major
 
-      q8. aes=''16 <f='' des aes>8. ges=''16 <ees='' bes aes>8. f=''16 ~ 16 <des='' aes f>8. ~ |
+      q8. aes=''16 <f='' des aes>8. ges=''16 <ees='' bes aes>8. f=''16 ~ 16 \once\override Tie.layer = #-2 <des='' aes f>8. ~ |
 
-      \time 3/4
+      \once\override Staff.TimeSignature.whiteout = #3 \once\override Staff.TimeSignature.layer = #-1 \time 3/4
 
       q2. |
     }
