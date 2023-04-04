@@ -14,7 +14,7 @@ date = #(strftime "%B %d %Y" (localtime (current-time)))
   } }
 }
 
-%#(set-global-staff-size 20)
+#(set-global-staff-size 17.0)
 %showLastLength = R1 * 10
 
 % version "2.23.10"
@@ -30,6 +30,7 @@ date = #(strftime "%B %d %Y" (localtime (current-time)))
   #(set-paper-size "a4")
   evenHeaderMarkup = \markup { \if \should-print-page-number { \fill-line { "" \fromproperty #'page:page-number-string } } }
   oddHeaderMarkup = \evenHeaderMarkup
+  page-count = #2
 }
 
 \include "global.ly"
