@@ -52,7 +52,7 @@ right = \relative c'' {
   \time 4/4
   % \tempo 2 = 60
 
-  <dis=' ais fis dis>2\)^"PUT IN LH!!" <dis=' fis ais>2 |
+  <dis=' ais fis dis>2\) <dis=' fis ais>2 |
   <eis=' fis ais>1 ~ |
   <eis fis ais cis>1 |
 
