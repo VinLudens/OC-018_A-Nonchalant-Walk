@@ -6,7 +6,6 @@ global = {
   \time 3/4
 }
 
-
 %%% SNIPPET START: Grace echo purger %%% {{{
 %created by: ArnoldTheresius
 
@@ -120,6 +119,20 @@ global = {
 %       "Do not purge this grob, it's wanted and not the result of a 'grace note echo' from different voices.")))
 
 %%% SNIPPET END %%% }}}
+
+% https://lilypond.org/doc/v2.25/Documentation/notation/slurs
+offsetPositions =
+#(define-music-function (offsets) (number-pair?)
+  #{
+     \once \override Slur.control-points =
+       #(lambda (grob)
+          (match-let ((((_ . y1) _ _ (_ . y2))
+                       (ly:slur::calc-control-points grob))
+                      ((off1 . off2) offsets))
+            (set! (ly:grob-property grob 'positions)
+                  (cons (+ y1 off1) (+ y2 off2)))
+            (ly:slur::calc-control-points grob)))
+  #})
 
 %{
 Some other usefull commands

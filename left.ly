@@ -211,7 +211,7 @@ left = \relative c {
   \time 4/4
   \key des \major
 
-  q4 <a des ges> <aes ees' ges> \clef "bass" ges,=,16( \once\override Tie.layer = #-2 <ges'= des'>8.) ~ |
+  q4 <a des ges> <aes ees' ges> \clef "bass" \offsetPositions #'(-2.75 . 0) ges,=,16( \once\override Tie.layer = #-2 <ges'= des'>8.) ~ |
 
   \once\override Staff.TimeSignature.whiteout = #3 \once\override Staff.TimeSignature.layer = #-1 \time 3/4
 
